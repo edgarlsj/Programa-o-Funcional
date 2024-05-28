@@ -28,14 +28,17 @@ public class Product {
         this.price = price;
     }
 
-    public static boolean staticProductPredicate(Product p){
+    public static boolean staticProductPredicate(Product p) {
         return p.getPrice() >= 100.0;
     }
 
-    public boolean nonStaticProductPredicate(Product p){
-        return p.getPrice() >= 100.0;
+    public static String staticUpperCaseName(Product p){
+        return p.getName().toUpperCase();
     }
 
+    public boolean nonStaticProductPredicate(Product p) {
+        return p.getPrice() >= 100.0;
+    }
 
 
     @Override
